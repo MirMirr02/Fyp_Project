@@ -1,12 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#fadfd9"
+             NavigationPage.HasNavigationBar="False"
              x:Class="Fyp_Project.View.MenuPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+    <Grid>
+
+        <StackLayout Padding="0" Margin="0,25,0,0" HorizontalOptions="FillAndExpand">
+
+            <StackLayout>
+                <Image x:Name="Logo" WidthRequest="500" HeightRequest="400" Source="logo.png" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Frame BackgroundColor="white" HeightRequest="500" HasShadow="False" Padding="0" Margin="10,-300,10,100" Opacity="1" CornerRadius="50">
+                    <StackLayout>
+                        <StackLayout Margin="0,15,0,0">
+                            <Label Text="Food Track" TextDecorations="Underline" FontSize="20" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <Frame BackgroundColor="#faeeeb" CornerRadius="30" HeightRequest="20" Margin="30,10,30,0">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="home.png" HeightRequest="30" Margin="30,-5,-30,0"/>
+                                <Label Text="FOOD123456789" TextColor="Black" FontSize="Medium" HorizontalOptions="CenterAndExpand" Margin="0,-5,0,0" AbsoluteLayout.LayoutBounds="0,0,0,0"/>
+                                <ImageButton Source="map.png" HeightRequest="50" Padding="0" BackgroundColor="Transparent" CornerRadius="80"/>
+
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

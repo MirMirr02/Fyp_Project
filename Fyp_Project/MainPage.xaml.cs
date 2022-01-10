@@ -17,7 +17,7 @@ namespace Fyp_Project
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new MenuPage()));
+            await Navigation.PushModalAsync(new NavigationPage(new TabbedBtm()));
         }
 
         private async void Button_Clicked2(object sender, EventArgs e)

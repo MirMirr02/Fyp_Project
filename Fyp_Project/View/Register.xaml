@@ -26,7 +26,17 @@
                                         <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry x:Name="SignUp" Placeholder="Email" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry x:Name="SignUp" Placeholder="Username" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="Black" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="phoneicon.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="SignUpPhone" Placeholder="Phone number" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -40,8 +50,13 @@
                                 </StackLayout>
                             </Frame>
 
+                            <StackLayout  Orientation="Horizontal" Margin="10,20,0,0">
+                                <Label Text="User type :" TextColor="Black" FontAttributes="Bold" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                                <RadioButton Content="Donor" FontSize="Small" x:Name="Donor"/>
+                                <RadioButton Content="NGO" FontSize="Small" x:Name="Organization" IsChecked="True"/>
 
 
+                            </StackLayout>
                             <Button Text="REGISTER NOW" BackgroundColor="Red" TextColor="White" CornerRadius="30" Margin="0,30,0,0"/>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                             </StackLayout>
