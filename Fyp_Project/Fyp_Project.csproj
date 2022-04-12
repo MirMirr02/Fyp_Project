@@ -11,6 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
@@ -25,12 +28,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\RegisterDONOR.xaml.cs">
+      <DependentUpon>RegisterDONOR.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\RegisterNGO.xaml.cs">
+      <DependentUpon>RegisterNGO.xaml</DependentUpon>
+    </Compile>
     <Compile Update="View\TabbedBtm.xaml.cs">
       <DependentUpon>TabbedBtm.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="View\Forget_Password.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\Location.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -40,7 +52,10 @@
     <EmbeddedResource Update="View\Profile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Register.xaml">
+    <EmbeddedResource Update="View\RegisterNGO.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Register_Gate.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\TabbedBtm.xaml">

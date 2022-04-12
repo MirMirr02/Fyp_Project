@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundColor="#fadfd9"
              NavigationPage.HasNavigationBar="False"
-             x:Class="Fyp_Project.View.Register">
+             x:Class="Fyp_Project.View.RegisterNGO">
 
 
     <Grid>
@@ -15,7 +15,7 @@
                     <StackLayout>
 
                         <StackLayout Margin="10">
-                            <Label Text="REGISTER" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                            <Label Text="REGISTER as NGO" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
                         </StackLayout>
 
                         <StackLayout Padding="0" Margin="15,10">
@@ -26,7 +26,17 @@
                                         <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry x:Name="SignUp" Placeholder="Username" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry x:Name="NGOSignUp" Placeholder="NGO Username" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="email.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="NGOSignUpEmail" Placeholder="NGO Email" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -36,7 +46,7 @@
                                         <Image Source="phoneicon.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry x:Name="SignUpPhone" Placeholder="Phone number" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry x:Name="NGOSignUpPhone" Placeholder="Phone number" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -46,18 +56,11 @@
                                         <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <Entry x:Name="SignUpPassword" Placeholder="Password" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <Entry x:Name="NGOSignUpPassword" Placeholder="Password" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-                            <StackLayout  Orientation="Horizontal" Margin="10,20,0,0">
-                                <Label Text="User type :" TextColor="Black" FontAttributes="Bold" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
-                                <RadioButton Content="Donor" FontSize="Small" x:Name="Donor"/>
-                                <RadioButton Content="NGO" FontSize="Small" x:Name="Organization" IsChecked="True"/>
-
-
-                            </StackLayout>
-                            <Button Text="REGISTER NOW" BackgroundColor="Red" TextColor="White" CornerRadius="30" Margin="0,30,0,0"/>
+                            <Button Text="REGISTER NOW" BackgroundColor="Red" TextColor="White" CornerRadius="30" Margin="0,30,0,0" Clicked="NGO_Register"/>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                             </StackLayout>
 
