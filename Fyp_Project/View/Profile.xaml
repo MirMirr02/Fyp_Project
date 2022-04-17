@@ -6,30 +6,35 @@
              x:Class="Fyp_Project.View.Profile">
 
     <StackLayout >
-        <StackLayout Padding="100">
-            <Frame 
-       BorderColor="Black"
-       Padding="2"
-       CornerRadius="50"
-       HeightRequest="100"
-       WidthRequest="100"
-       IsClippedToBounds="True"
-       HorizontalOptions="Center"
-       VerticalOptions="Center">
-                <Frame Margin="1" CornerRadius="50" Padding="0">
-                    <Image x:Name="ProfileEntry" Source="profile.png"
-         Aspect="AspectFill"/>
-                </Frame>
-            </Frame>
-        </StackLayout>
-        <Frame BackgroundColor="#ECF0F1" HeightRequest="200" HasShadow="True" Padding="0" Margin="40,-50,40,0" Opacity="0.9" CornerRadius="30">
-            <StackLayout>
-                <Label x:Name="Name" Text="(Name Here)" TextColor="Black" FontSize="20" FontAttributes="Bold"
-                    HorizontalOptions="CenterAndExpand" Padding="0" Margin="40"/>
-                <Label x:Name="Phone" Text="(Phone Number Here)" TextColor="Black" FontSize="20" FontAttributes="Bold"
-                    HorizontalOptions="CenterAndExpand" Padding="0" Margin="0"/>
-            </StackLayout>
+        <Frame BackgroundColor="CadetBlue">
+            <Label Text="PROFILE PAGE" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+            
         </Frame>
+         
 
+
+        <Frame WidthRequest="250" HeightRequest="50" CornerRadius="15" HasShadow="false" Padding="0" VerticalOptions ="Center"  HorizontalOptions ="Center" Margin="0,50,0,0" BackgroundColor="IndianRed">
+            <Label x:Name="profilename" Text="Username" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,0" FontSize="15" FontAttributes="Bold"/>
+        </Frame>
+        <Frame  BackgroundColor="White" HeightRequest="220" HasShadow="True" Padding="0" Margin="0,90,0,0" 
+    WidthRequest      ="300"
+    CornerRadius      ="40"
+    VerticalOptions   ="Center"
+    HorizontalOptions ="Center">
+            <Grid>
+                <Button x:Name="Post" Text="Donation"  Margin="0,50,0,0" BackgroundColor="PaleGreen" FontSize="15" TextColor="white"
+    WidthRequest      ="200"
+    HeightRequest     ="50"
+    CornerRadius      ="40"
+    VerticalOptions="Start"
+    HorizontalOptions ="Center"/>
+                <Button x:Name="Logout" Text="Logout"  Margin="0,100,0,0" Clicked="Logout_Clicked" BackgroundColor="PaleVioletRed" FontSize="15" TextColor="White"
+    WidthRequest      ="200"
+    HeightRequest     ="50"
+    CornerRadius      ="40"
+    VerticalOptions   ="Center"
+    HorizontalOptions ="Center"/>
+            </Grid>
+        </Frame>
     </StackLayout>
 </ContentPage>

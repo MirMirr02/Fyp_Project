@@ -5,51 +5,62 @@
              NavigationPage.HasNavigationBar="False"
              x:Class="Fyp_Project.View.Upload">
 
-    <Grid>
-        <Label Text="Food Information" TextColor="#b86161" FontSize="30" FontAttributes="Bold" TextDecorations="Underline" HorizontalOptions="Center" Margin="0,10,0,0"/>
-        <StackLayout>
-            <Image x:Name="imgChoosed" Source="thumbnail.jpg" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,60,0,0" BackgroundColor="Black"></Image>
-            <Button x:Name="btnPick" Text="Upload image" BackgroundColor="Black" TextColor="White" Opacity="0.8" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="40" Margin="0,5,0,0"></Button>
-        </StackLayout>
-        <StackLayout Padding="0" Margin="10,220,10,100" HorizontalOptions="FillAndExpand">
-            <Frame  BackgroundColor="#ECF0F1" HeightRequest="400" HasShadow="True" Padding="0" Margin="0" Opacity="0.9" CornerRadius="30">
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <Grid RowDefinitions="Auto,Auto">
+            <StackLayout Grid.Row="0">
+                <Label Text="UPLOAD" TextColor="PaleVioletRed" HorizontalOptions="CenterAndExpand" FontSize="25" Margin="0,30,0,0" FontAttributes="Bold" />
+                <Label Text="FOOD DONATION" TextColor="Black" Padding="0" HorizontalOptions="Center" FontSize="16" FontAttributes="Bold"/>
+            </StackLayout>
 
-                <StackLayout>
-                 <StackLayout Padding="0" Margin="15,20">
+            <Frame Grid.Row="1" BackgroundColor="Transparent" Padding="0" Margin="0,20,0,80" 
+    WidthRequest      ="900"
+    CornerRadius      ="40">
 
-                        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
-                            <StackLayout Orientation="Horizontal">
-                                <Entry x:Name="NameEntry" Placeholder="Food Name" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+                  
+                    <Grid Grid.Row="1">
+                        <Frame  Grid.Column="0" CornerRadius="20" Padding="0" Margin="10,0,10,10" BackgroundColor="#a6bdde">
+                            <StackLayout Padding="30,10,30,10">
+                                <Label Text="Food type" FontSize="18"  FontAttributes="Bold"></Label>
+                                <Entry x:Name="price" Placeholder="Food" FontSize="16"/>
                             </StackLayout>
                         </Frame>
+                    </Grid>
+                    <Frame Grid.Row="2" CornerRadius="20" Padding="0" Margin="10,0,10,10" BackgroundColor="#b5dbdd"  >
+                        <StackLayout  Padding="30,10,30,10">
+                            <Label Text="Phone NO." FontSize="18"  FontAttributes="Bold" ></Label>
+                            <Entry x:Name="number" Placeholder="Contact Number" FontSize="16" Keyboard="Numeric"/>
+                        </StackLayout>
+                    </Frame>
 
-                        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="0,5,0,0">
-                            <StackLayout Orientation="Horizontal">
-                                <Entry x:Name="PhoneEntry" Placeholder="Phone no." TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
-                            </StackLayout>
-                        </Frame>
+                    <Frame Grid.Row="3" CornerRadius="20" Padding="0" Margin="10,0,10,10" BackgroundColor="#a7d6d3" >
+                        <StackLayout  Padding="30,10,30,10">
+                            <Label Text="Description" FontSize="18"  FontAttributes="Bold" ></Label>
+                            <Entry x:Name="descp" Placeholder="Description" FontSize="16"/>
+                        </StackLayout>
+                    </Frame>
 
-                        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="0,5,0,0">
-                            <StackLayout Orientation="Horizontal">
-                                <Entry x:Name="LocationEntry" Placeholder="Location" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
-                            </StackLayout>
-                        </Frame>
-                        <StackLayout Spacing="10" VerticalOptions="CenterAndExpand" Margin="0,0,0,0">
-                            <Label FontAttributes="Bold" FontSize="15" TextColor="Black" Text="Description"/>
-                            <Frame Visual="Material" HasShadow="False" BorderColor="LightGray">
-                                <Editor HeightRequest="40" Placeholder="Add your description here" x:Name="Description"></Editor>
+
+                    <Frame Grid.Row="5" CornerRadius="20" Padding="0" Margin="10,0,10,10" BackgroundColor="#b7daca">
+                        <StackLayout Padding="30,10,30,10">
+                            <Label Text="Upload Food Picture" FontSize="22" FontAttributes="Bold" Padding="0,0,0,20"/>
+                            <Frame Padding="0" CornerRadius="20">
+                                <Image x:Name="mediapath" Aspect="AspectFill" HeightRequest="200"/>
+
                             </Frame>
+                            <Label x:Name="downloadLink" FontSize="1" TextColor="Transparent"/>
+                            <Label x:Name="guidtext" FontSize="1" TextColor="Transparent"/>
+                            <Button Text="Upload" BackgroundColor="#d7e5cc" FontSize="16" CornerRadius="20" Clicked="Upload_Clicked"/>
                         </StackLayout>
-                        <Button Text="Submit" BackgroundColor="#5bba20" TextColor="White" CornerRadius="30" Margin="0,10,0,0" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center"/>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                        </StackLayout>
+                    </Frame>
+                    <StackLayout Grid.Row="6" Padding="30,20,30,10">
+                        <Button Text="POST" BackgroundColor="#d9e3a8" FontSize="16" CornerRadius="30" Clicked="post_Clicked"/>
                     </StackLayout>
-                </StackLayout>
+                </Grid>
             </Frame>
-        </StackLayout>
-    </Grid>
-
+        </Grid>
+    </ScrollView>
 </ContentPage>
-
 
    

@@ -16,10 +16,10 @@ namespace Fyp_Project.Model
         public string UserId { get; set; }
         public string Locations { get; set; }
         public string UserEmail { get; set; }
-        public string UserName { get; set; }
         public string UserPassword { get; set; }
         public string PostDateTime { get; set; }
         public string GUID { get; set; }
         public string Phone { get; set; }
+        public string NewsDateTime { get; set; }
     }
 }

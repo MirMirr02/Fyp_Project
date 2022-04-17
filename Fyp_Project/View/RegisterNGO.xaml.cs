@@ -62,8 +62,7 @@ namespace Fyp_Project.View
                     string getPassword = NGOSignUpPassword.Text;
                     FirebaseClient fc = new FirebaseClient("https://fyp-project-c3052-default-rtdb.asia-southeast1.firebasedatabase.app/");
                     var StoreUser = await fc
-                        .Child("Account List NGO")
-                        .Child("NGO List")
+                        .Child("UserList")
                         .PostAsync(new Person()
                         {
                             UserId = getuid,

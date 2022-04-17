@@ -61,8 +61,7 @@ namespace Fyp_Project.View
                     string getPassword = DONORSignUpPassword.Text;
                     FirebaseClient fc = new FirebaseClient("https://fyp-project-c3052-default-rtdb.asia-southeast1.firebasedatabase.app/");
                     var StoreUser = await fc
-                        .Child("Account List DONOR")
-                        .Child("DONOR List")
+                        .Child("UserList")
                         .PostAsync(new Person()
                         {
                             UserId = getuid,
